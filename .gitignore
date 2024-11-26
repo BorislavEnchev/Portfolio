@@ -1,0 +1,56 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (Visual Studio 2015 and newer)
+*.vs/
+.vs/
+.vscode/
+
+# Build output
+bin/
+obj/
+out/
+*.dll
+*.exe
+*.pdb
+*.cache
+
+# Logs and temporary files
+*.log
+*.tmp
+*.tmpx
+*.bak
+*.swp
+*.swo
+
+# Other files to ignore
+*.DS_Store
+Thumbs.db
