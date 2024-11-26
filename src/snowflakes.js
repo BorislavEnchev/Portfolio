@@ -1,51 +1,52 @@
+import p5 from 'p5';
+
 // Define array to hold snowflake objects
-let snowflakes = [];
+export let snowflakes = [];
 
-function setup() {
-    createCanvas(windowWidth, windowHeight);
+export function setup(p) {
+    p.createCanvas(p.windowWidth, p.windowHeight);
 
-    angleMode(DEGREES);
+    p.angleMode(p.DEGREES);
 
     // Create snowflake objects
     for (let i = 0; i < 300; i++) {
         // Add a new snowflake object to the array
-        snowflakes.push(new Snowflake());
+        snowflakes.push(new Snowflake(p));
     }
 
     // Create screen reader accessible description
-    describe('Snowflakes falling on a black background.');
+    p.describe('Snowflakes falling on a black background.');
 }
 
-function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
+export function windowResized(p) {
+    p.resizeCanvas(p.windowWidth, p.windowHeight);
 }
 
-function draw() {
-    background(0);
+export function draw(p) {
+    p.background(0);
 
     // Update and display each snowflake in the array
-    let currentTime = frameCount / 60;
+    let currentTime = p.frameCount / 60;
 
     for (let flake of snowflakes) {
         // Update each snowflake position and display
-        flake.update(currentTime);
-        flake.display();
+        flake.update(currentTime, p);
+        flake.display(p);
     }
 }
 
 // Define the snowflake class
-
 class Snowflake {
-    constructor() {
+    constructor(p) {
         this.posX = 0;
-        this.posY = random(-height, 0);
-        this.initialAngle = random(0, 360);
-        this.size = random(2, 5);
-        this.radius = sqrt(random(pow(width / 2, 2)));
-        this.color = color(random(200, 256), random(200, 256), random(200, 256));
+        this.posY = p.random(-p.height, 0);
+        this.initialAngle = p.random(0, 360);
+        this.size = p.random(2, 5);
+        this.radius = p.sqrt(p.random(p.pow(p.width / 2, 2)));
+        this.color = p.color(p.random(200, 256), p.random(200, 256), p.random(200, 256));
     }
 
-    update(time) {
+    update(time, p) {
         // Define angular speed (degrees / second)
         let angularSpeed = 35;
 
@@ -53,21 +54,21 @@ class Snowflake {
         let angle = this.initialAngle + angularSpeed * time;
 
         // x position follows a sine wave
-        this.posX = width / 2 + this.radius * sin(angle);
+        this.posX = p.width / 2 + this.radius * p.sin(angle);
 
         // Different size snowflakes fall at different y speeds
         let ySpeed = 8 / this.size;
         this.posY += ySpeed;
 
         // When snowflake reaches the bottom, move it to the top
-        if (this.posY > height) {
+        if (this.posY > p.height) {
             this.posY = -50;
         }
     }
 
-    display() {
-        fill(this.color);
-        noStroke();
-        ellipse(this.posX, this.posY, this.size);
+    display(p) {
+        p.fill(this.color);
+        p.noStroke();
+        p.ellipse(this.posX, this.posY, this.size);
     }
 }
