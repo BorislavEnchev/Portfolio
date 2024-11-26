@@ -8,16 +8,16 @@ function App() {
 
     return (
         <>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Project</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
             <div className="content">
-                <h1>Borislav's Portfolio</h1>
-                <nav>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Project</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contacts</a></li>
-                    </ul>
-                </nav>
+                <h1>Borislav's Portfolio</h1>                
             </div>
         </>
     )

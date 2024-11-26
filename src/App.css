@@ -1,14 +1,3 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-}
-
 canvas {
     position: fixed;
     top: 0;
@@ -17,15 +6,39 @@ canvas {
 }
 
 .content {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
     text-align: center;
     z-index: 1;
     position: relative;
 }
 
+/* Style for the nav to ensure it is on top */
+nav {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* Ensures the nav spans the full width for proper centering */
+    background: rgba(0, 0, 0, 0.5); /* Optional: Add a background to nav for better visibility */
+    z-index: 2; /* Ensure nav is above other content */
+    text-align: center; /* Center the navigation items */
+    padding: 1rem 0; /* Optional: Add vertical padding */
+}
+
+/* Remove list style from ul and align items inline */
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav li {
