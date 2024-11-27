@@ -1,15 +1,22 @@
 import { useState } from 'react'
 import './App.css'
-import Navigation from './components/Navigation'
+import { Navigation, Home, Projects, About, Contact } from './components'
 
 function App() {
-    const [count, setCount] = useState(0)
+    const [selectedMenu, setSelectedMenu] = useState('Home');
+
+    const handleMenuClick = (menu) => {
+        setSelectedMenu(menu);
+    };
 
     return (
         <>
-            <Navigation />
+            <Navigation onMenuClick={handleMenuClick} />
             <div className="content">
-                <h1>Borislav's Portfolio</h1>
+                {selectedMenu === 'Home' && <Home />}
+                {selectedMenu === 'Projects' && <Projects />}
+                {selectedMenu === 'About' && <About />}
+                {selectedMenu === 'Contact' && <Contact />}
             </div>
         </>
     )

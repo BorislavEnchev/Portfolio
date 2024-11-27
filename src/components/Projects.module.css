@@ -1,0 +1,33 @@
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+    ul > li {
+        margin: 10px 0; /* Space out the list items */
+    }
+
+        ul > li > a {
+            color: white; /* Set the text color to white */
+            text-decoration: none; /* Remove underline */
+            transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+        }
+
+            ul > li > a:hover {
+                color: #FFD700; /* Change color on hover (golden color) */
+                transform: scale(1.05); /* Slightly enlarge the text on hover */
+            }
+            ul > li > a:focus {
+                outline: none; /* Remove the default outline */
+            }
+
+            ul > li > a:after {
+                content: none; /* Remove the after pseudo-element from the global styles */
+            }
+
+            ul > li > a:hover {
+                color: #FFD700; /* Change color on hover (golden color) */
+                transform: scale(1.05); /* Slightly enlarge the text on hover */
+                text-decoration: none; /* Ensure no underline on hover */
+            }

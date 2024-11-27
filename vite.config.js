@@ -6,4 +6,14 @@ export default defineConfig({
     build: {
         outDir: 'dist',
     },
+    css: {
+        modules: {
+            localsConvention: 'PascalCase',
+        },
+        preprocessorOptions: {
+            less: {
+                javascriptEnabled: true,
+            },
+        },
+    },
 });

@@ -19,17 +19,33 @@ html, body {
 
 .content {
     margin: 0;
-    padding: 0;
+    padding: 0 15px;
     flex: 1;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
     text-align: center;
-    z-index: 2;
-    position: fixed;
-    top: 80px; /* Adjust to ensure it stays below the menu */
+    z-index: 1;
+    position: absolute;
+    top: 70px; /* Adjust to ensure it stays below the menu */
     left: 0;
     right: 0;
     bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 15px; /* Adds top padding to prevent overlap with navigation */        
+        position: relative;
+        top: 5px;
+    }
+}
+
+
+@media (min-width: 769px) {
+    .content {
+        padding: 0 30px; /* Adds more horizontal padding for larger screens */
+    }
 }
