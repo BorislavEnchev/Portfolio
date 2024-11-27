@@ -5,35 +5,50 @@ canvas {
     z-index: -1;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Ensures children take full height */
+}
+
 .content {
     margin: 0;
     padding: 0;
-    height: 100%;
-    overflow: hidden;
+    flex: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     color: white;
     text-align: center;
-    z-index: 1;
-    position: relative;
+    z-index: 2;
+    position: fixed;
+    top: 80px; /* Adjust to ensure it stays below the menu */
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
-/* Style for the nav to ensure it is on top */
-nav {
+
+/*nav {
     position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%; /* Ensures the nav spans the full width for proper centering */
-    background: rgba(0, 0, 0, 0.5); /* Optional: Add a background to nav for better visibility */
-    z-index: 2; /* Ensure nav is above other content */
-    text-align: center; /* Center the navigation items */
-    padding: 1rem 0; /* Optional: Add vertical padding */
-}
+    width: 100%;  
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2; 
+    text-align: center;
+    padding: 1rem 0;
+}*/
 
 /* Remove list style from ul and align items inline */
-nav ul {
+/*nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -92,4 +107,4 @@ nav a {
 
 .read-the-docs {
   color: #888;
-}
+}*/
