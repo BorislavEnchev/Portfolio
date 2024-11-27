@@ -8,7 +8,8 @@ export default defineConfig({
     },
     css: {
         modules: {
-            localsConvention: 'PascalCase',
+            localsConvention: 'camelCase',
+            generateScopedName: '[name]__[local]__[hash:base64:5]',
         },
         preprocessorOptions: {
             less: {
