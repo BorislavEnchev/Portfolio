@@ -1,12 +1,20 @@
+import React from 'react';
 import styles from './Projects.module.css';
+import { PROJECTS } from '../projects.js';
 
-export default function Projects() {
-    return (<>
-        <h1>Web Projects and Apps</h1>
-        <ul className={styles.list}>
-            <li><a href="#"><h2>NPI Lookup</h2></a></li>
-            <li><a href="#"><h2>MorningMed</h2></a></li>
-            <li><a href="#"><h2>Study Tracker</h2></a></li>
-        </ul>
-    </>)
+export default function Projects({ onProjectClick }) {
+    return (
+        <>
+            <h1>Web Projects and Apps</h1>
+            <ul className={styles.list}>
+                {Object.keys(PROJECTS).map((projectName) => (
+                    <li key={projectName}>
+                        <a href="#" onClick={() => onProjectClick(projectName)}>
+                            <h2>{PROJECTS[projectName].title}</h2>
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </>
+    );
 }

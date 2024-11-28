@@ -1,33 +1,33 @@
 ul {
-    list-style-type: none; /* Remove bullet points */
+    list-style-type: none; 
     padding: 0;
     margin: 0;
 }
 
     ul > li {
-        margin: 10px 0; /* Space out the list items */
+        margin: 10px 0;
     }
 
         ul > li > a {
-            color: white; /* Set the text color to white */
-            text-decoration: none; /* Remove underline */
-            transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease; 
         }
 
             ul > li > a:hover {
-                color: #FFD700; /* Change color on hover (golden color) */
-                transform: scale(1.05); /* Slightly enlarge the text on hover */
+                color: #FFD700; 
+                transform: scale(1.05); 
             }
             ul > li > a:focus {
-                outline: none; /* Remove the default outline */
+                outline: none;
             }
 
             ul > li > a:after {
-                content: none; /* Remove the after pseudo-element from the global styles */
+                content: none;
             }
 
             ul > li > a:hover {
-                color: #FFD700; /* Change color on hover (golden color) */
-                transform: scale(1.05); /* Slightly enlarge the text on hover */
-                text-decoration: none; /* Ensure no underline on hover */
+                color: #FFD700;
+                transform: scale(1.05);
+                text-decoration: none;
             }

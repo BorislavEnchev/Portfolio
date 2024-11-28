@@ -18,7 +18,7 @@ html, body {
 }
 
 .content {
-    margin: 0;
+    margin: 0 auto;
     padding: 0 15px;
     flex: 1;
     display: flex;
@@ -46,6 +46,7 @@ html, body {
 
 @media (min-width: 769px) {
     .content {
+        width: 70%;
         padding: 0 30px; /* Adds more horizontal padding for larger screens */
     }
 }
