@@ -17,8 +17,8 @@ export default function ProjectPage({ projectName }) {
                 <h3>Technologies Used:</h3>
                 <h3>{project.technologies}</h3>
             </div>
-            {project.link === 'This project is private.' ? (
-                <p className="project-private">This project is private.</p>
+            {typeof project.link === 'string' ? (
+                <p className="project-private">{project.link}</p>
             ) : (
                 <button
                     className="project-button"
