@@ -1,21 +1,16 @@
 export default function About() {
     return (<>
-        <p>I'm a passionate Fullstack Developer based in Ruse, Bulgaria, with a strong foundation in both front-end and back-end development. Over the past two years, I've honed my skills in building and maintaining robust web applications using C# and .NET Core. My journey has taken me through various facets of software development, from designing seamless user experiences with JavaScript, HTML5, and CSS3, to diving deep into the world of React for a major project.
-            <br/>
-            My backend expertise is complemented by a solid background in relational databases like MySQL and PostgreSQL, and a growing understanding of document databases. I am adept at designing and consuming RESTful APIs, and I have experience working within a microservice architecture.
-            <br /><br />
-            <h3>What I Bring to the Table</h3><br />
-            Full Life-Cycle Development: Proven experience in developing, testing, deploying, maintaining, and improving web applications, ensuring high-quality and efficient code.
-            <br />
-            React and Front-End Technologies: Proficient in React, JavaScript, HTML5, and CSS3, ensuring a seamless user experience.
-            <br />
-            Database Management: Strong knowledge of MySQL and PostgreSQL, with an understanding of document databases.
-            <br />
-            RESTful APIs: Designed and consumed RESTful APIs, facilitating smooth communication between front-end and back-end systems.
-            <br />
-            Adaptability and Learning: A constant learner, staying up-to-date with industry trends and best practices.
-            <br />
-            Team Collaboration: Skilled at working autonomously within a team, with extensive experience in remote work environments.
+        <p>
+            Hi, I'm Borislav Enchev, a passionate software developer with a knack for crafting efficient and intuitive web applications. My journey in programming began at SoftUni Software University, where I honed my skills in C#, ASP.NET Core, JavaScript, and more. Over the years, I've developed several impactful projects in the healthcare sector, including comprehensive tools for clinical trial management and healthcare news aggregation.
+        </p>
+        <p>
+            I thrive on turning complex challenges into innovative solutions, always aiming to improve user experiences and system efficiency. My expertise spans multiple technologies, from backend development with .NET and SQL to frontend frameworks like ReactJS. I'm constantly learning and staying updated with the latest industry trends, which helps me bring fresh ideas and approaches to my work.
+        </p>
+        <p>
+            Beyond coding, I have a profound love for technology, cosmos, and nature. Exploring the latest tech advancements, marveling at the wonders of the universe, and spending time in nature are some of my greatest joys. This blend of passions drives my curiosity and inspires me to create innovative solutions.
+        </p >
+        <p>
+            Feel free to explore my portfolio and reach out if you'd like to connect or collaborate!
         </p>
     </>)
 }
