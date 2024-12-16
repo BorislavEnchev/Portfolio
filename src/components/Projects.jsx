@@ -5,7 +5,7 @@ import { PROJECTS } from '../projects.js';
 export default function Projects({ onProjectClick }) {
     return (
         <>
-            <h1>Web Projects and Apps</h1>
+            <h1>Projects and Apps</h1>
             <ul className={styles.list}>
                 {Object.keys(PROJECTS).map((projectName) => (
                     <li key={projectName}>

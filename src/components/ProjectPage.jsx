@@ -1,5 +1,4 @@
 import React from 'react';
-import './ProjectPage.module.css';
 import { PROJECTS } from '../projects.js';
 
 export default function ProjectPage({ projectName }) {
@@ -17,15 +16,12 @@ export default function ProjectPage({ projectName }) {
                 <h3>Technologies Used:</h3>
                 <h3>{project.technologies}</h3>
             </div>
-            {typeof project.link === 'string' ? (
-                <p className="project-private">{project.link}</p>
+            {project.link.startsWith("http") ? (
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
+                    {project.link}
+                </a>
             ) : (
-                <button
-                    className="project-button"
-                    onClick={() => window.open(project.link, '_blank', 'noopener,noreferrer')}
-                >
-                    View Project
-                </button>
+                <p className="project-private">{project.link}</p>
             )}
         </div>
     );

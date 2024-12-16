@@ -15,8 +15,8 @@ ul {
         }
 
             ul > li > a:hover {
-                color: #FFD700; 
-                transform: scale(1.05); 
+                color: #EA8D8D;
+                transform: scale(1.05);
             }
             ul > li > a:focus {
                 outline: none;
@@ -27,7 +27,7 @@ ul {
             }
 
             ul > li > a:hover {
-                color: #FFD700;
+                color: #EA8D8D;
                 transform: scale(1.05);
                 text-decoration: none;
             }

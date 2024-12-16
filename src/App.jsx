@@ -4,15 +4,15 @@ import { Navigation, Home, Projects, About, Contact, ProjectPage } from './compo
 
 function App() {
     const [selectedMenu, setSelectedMenu] = useState('Home');
-    const [selectedProject, setSelectedProject] = useState('');
+    const [selectedProject, setSelectedProject] = useState(null);
 
     const handleMenuClick = (menuItem) => {
         setSelectedMenu(menuItem);
-        setSelectedProject('');
+        setSelectedProject(null);
     };
     const handleProjectClick = (project) => {
         setSelectedProject(project);
-        setSelectedMenu('');
+        setSelectedMenu(null);
     }
 
     return (
@@ -23,7 +23,7 @@ function App() {
                 {selectedMenu === 'Projects' && <Projects onProjectClick={handleProjectClick} />}
                 {selectedMenu === 'About' && <About />}
                 {selectedMenu === 'Contact' && <Contact />}
-                {selectedProject !== '' && <ProjectPage projectName={selectedProject} />}
+                {selectedProject && <ProjectPage projectName={selectedProject} />}
             </div>
         </>
     )
