@@ -7,7 +7,7 @@ export const PROJECTS = {
     },
     morningmed: {
         title: 'MorningMed',
-        description: 'A healthcare news website that aggregates medical news from multiple sources several times a day.The platform features an admin editor, email newsletters, comments, targeted ads, and user interaction tracking. Engineered a healthcare news platform that continually compiles the latest medical news from various sources throughout the day. Morning Med includes an admin editor, email newsletters, and features like comments, targeted ads, and user interaction tracking. The platform utilizes Amazon Comprehend Medical to identify and categorize medical entities, including diagnoses and prescriptions. It also hosts original articles and content from partners, with options for social media sharing to boost engagement.',
+        description: 'Created a healthcare news platform that continually compiles the latest medical news from various sources throughout the day. Morning Med includes an admin editor, email newsletters, and features like comments, targeted ads, and user interaction tracking. The platform utilizes Amazon Comprehend Medical to identify and categorize medical entities, including diagnoses and prescriptions. It also hosts original articles and content from partners, with options for social media sharing to boost engagement.',
         technologies: 'C#, ASP.NET Core, RESTful API, PostgreSQL, Npgsql, JS, Ajax, Amazon Lambda and S3, jQuery, HTML, CSS, OAuth, AWS',
         link: "The project is no longer available due to the company's closure",
     },
